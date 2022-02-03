@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: samsung-secret-0
+  labels:
+    app: samsung    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 

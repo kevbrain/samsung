@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: samsung-dev-trigger
+  namespace: samsung-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: samsung-dev-triggerbinding
+  template:
+    ref: samsung-dev-triggertemplate

@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: samsung-dev-eventlistener
+  namespace: samsung-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: samsung-dev-trigger

@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: samsung-route
+  labels:
+    app: samsung
+spec:
+  to:
+    kind: Service
+    name: samsung-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
